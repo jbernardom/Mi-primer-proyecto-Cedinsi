@@ -1,0 +1,39 @@
+
+
+
+.img {
+    width: 550px;
+    height: 250px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    float: left;
+}
+
+#menu a {
+    text-decoration: none;
+    display: block;
+    padding: 12px 56px;
+    color: rgba(255, 255, 255, 1);
+    
+
+    
+
+}
+#menu {
+    background: rgba(102, 102, 102, 1);
+    width: 1900px;
+    height: 52px;
+}
