@@ -9,8 +9,9 @@
 }
 
 .img {
-    width: 550px;
-    height: 250px;
+    width: 350px;
+    height: 150px;
+    border-radius: 50px;
 }
 
 .img1 {
@@ -35,15 +36,18 @@
 .contenedor {
     background-image: url(./Imagenes/servi.jpg);
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: stretch;
     color: white;
     height: 900px;
 }
+
 .productos {
-    
-
+    margin-top: 280px;
+    margin-left: 20px;
+    font-size: 20px;
 }
-
 
 
 #menu ul {
@@ -72,10 +76,11 @@
     height: 52px;
 }
 
-h4 {
+h2 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    font-size: 30px;
+    color: white;
 }
 .redes {
    display: flex;
