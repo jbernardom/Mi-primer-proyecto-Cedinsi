@@ -1,0 +1,14 @@
+
+
+ 
+.contenedor {
+    background-image: url(./../Imagenes/servi.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 900px;
+}
+
+
