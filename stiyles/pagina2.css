@@ -1,11 +1,7 @@
 .contenedor {
-   display: flex;
-   justify-content: center; 
-   align-items: flex-start;
-   align-content: stretch;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
-.parrafo {
-    border-color: aqua;
-    border-width: 10px;
-    font-size: 20px;
-}
+
