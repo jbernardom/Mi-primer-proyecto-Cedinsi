@@ -160,3 +160,14 @@ h2 {
     text-align: center;
 
 }
+
+#toggleButton {
+    background-color: aqua;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-color: cornflowerblue;
+    border-style: solid;
+    border-width: 3px;
+}
