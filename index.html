@@ -77,19 +77,48 @@
             
                     <p>Diseño y elaboración de tubería en aluminio, bronces, metálicos</p>
                     <p>Para consultar productos haga click <a href="http://127.0.0.1:5500/pagina3.html">aqui</a> </p>
-                </section>
-                <form class="form">
-                    <div class="form_container">
-                          <input type="text" class="form_input" placeholder="Nombre:">
-                          <input type="text" class="form_input" placeholder="Telefono:">
-                          <input type="text" class="form_input" placeholder="Ciudad:">
-                          <input type="email" class="form_input" placeholder="Email:">
-                          <textarea class="form_input form_input--message" placeholder="Mensaje:"></textarea>
-        
-                          <input type="submi" value="Enviar" class="btn btn-primary">
+
+
+                </section class="registry-section" >
+                
+                    <div class="form-container">
+                        <form id="user-form" class="form" >
+                            <div class="form-box">
+                                <label for="nickName">Nombre</label>
+                                <input type="text" name="nickName" id="nickName" placeholder="Nombre">
+                                <small class="error-text">Introduce un nombre valido</small>
+                            </div>
+                        </form>
+
+                        <form id="user-form" class="form" >
+                            <div class="form-box">
+                                <label for="telefono">Telefono</label>
+                                <input type="number" name="telefono" id="telefono" placeholder="Telefono">
+                                <small class="error-text">Introduce un numero de telefono</small>
+                            </div>
+                        </form>
+
+                        <form id="user-form" class="form" >
+                            <div class="form-box">
+                                <label for="city">Ciudad</label>
+                                <input type="text" name="city" id="city" placeholder="Ciudad">
+                                <small class="error-text">Introduce un nombre de tu ciudad</small>
+                            </div>
+                        </form>
+
+                        <form id="user-form" class="form" >
+                            <div class="form-box">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <small class="error-text">Introduce un email valido</small>
+                            </div>
+                            <button type="submit" id="submit-btn" disabled>Enviar</button>
+                        </form>
+                          
+                          
                     </div>
                     
-                </form>
+                
             </div>
     </section>
 <footer class="text-center">
@@ -139,5 +168,6 @@
 <script src="./javascrip/index.js"></script>
 <script type="text/javascript" src="./javascrip/buscador.js"></script>
 <script type="text/javascript" src="./javascrip/busqueda.js"></script>
+<script src="./javascrip/formulario.js"></script>
 </body>
 </html>
