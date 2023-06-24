@@ -86,35 +86,39 @@
                      </div>
                         <form id="user-form" class="form" >
                             <div class="form-box">
-                                <label for="nickName">Nombre</label>
-                                <input type="text" name="nickName" id="nickName" placeholder="Nombre">
-                                <small class="error-text">Introduce un nombre valido</small>
+                                <label for="firstName">Nombre</label>
+                                <input id="firstNameInput" type="text" placeholder="Nombre">
+                                <div id="firstNameError" class="error-text">
+                               <!--<img class="icon-error" src="./Imagenes/icon-error.svg" alt="">
+                                    <p class="error">Introduce un nombre valido</p>--> 
+                                </div>
                             </div>
+                            
                         </form>
 
                         <form id="user-form" class="form" >
                             <div class="form-box">
-                                <label for="telefono">Telefono</label>
-                                <input type="number" name="telefono" id="telefono" placeholder="Telefono">
-                                <small class="error-text">Introduce un numero de telefono</small>
-                            </div>
+                                <label for="lastName">Apellido</label>
+                                <input id="lastNameInput" type="text" placeholder="Apellido">
+                                <div id="lastNameError" class="error-text"></div>
+                            </div> 
                         </form>
 
                         <form id="user-form" class="form" >
                             <div class="form-box">
-                                <label for="city">Ciudad</label>
-                                <input type="text" name="city" id="city" placeholder="Ciudad">
-                                <small class="error-text">Introduce un nombre de tu ciudad</small>
+                                <label for="tel">Telefono</label>
+                                <input id="telInput" type="number" placeholder="Telefono">
+                                <div id="telError" class="error-text"></div>
                             </div>
                         </form>
 
                         <form id="user-form" class="form" >
                             <div class="form-box">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Email">
-                                <small class="error-text">Introduce un email valido</small>
+                                <input id="emailInput" placeholder="Correo">
+                                <div id="emailError" class="error-text"></div>
                             </div>
-                            <button type="submit" id="submit-btn" disabled>Enviar</button>
+                            <button type="submit" id="submit-btn">Enviar</button>
                         </form>
                           
                           
