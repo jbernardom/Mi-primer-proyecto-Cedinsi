@@ -14,25 +14,30 @@ const button = document.querySelector('#submit');
 
 button.addEventListener('click', (event)=>{
     event.preventDefault();
-    validateEmpty(firstName.value, firstName, firstNameError);
+    validateEmpty(firstName.value, firstName, firstNameError, 'Nombre');
+    validateEmpty(lastName.value, lastName, lastNameError, 'Apellido');
+    validateEmpty(tel.value, tel, telError, 'Telefono');
+    validateEmpty(email.value, email, emailError, 'Email');
 });
 
-function validateEmpty(valueInput, divInput, divError){
+
+function validateEmpty(valueInput, divInput, divError, nameInput){
     if(valueInput.length == 0){
-         showError(divInput, divError);
+         showError(divInput, divError, nameInput);
     }else{
         hideError(divInput, divError);
     }
 }
 
-function showError(divInput, divError){
+function showError(divInput, divError, nameInput){
      divInput.style.border = '1px solid red';
      divError.innerHTML = `<img class="icon-error" src="./Imagenes/icon-error.svg" alt="">
-     <p class="error">Introduce un nombre valido</p>`;
+     <p class="error">${nameInput} no puede estar vacio</p>`;
 }
 
-function hideError(divInput){
+function hideError(divInput, divError){
     divInput.style.border = '1px solid #1e9ba3';
+    divError.innerHTML = ``;
 }
 
 
