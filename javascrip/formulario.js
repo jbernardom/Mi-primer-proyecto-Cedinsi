@@ -14,12 +14,22 @@ const button = document.querySelector('#submit');
 
 button.addEventListener('click', (event)=>{
     event.preventDefault();
-    validateEmpty(firstName.value, firstName, firstNameError, 'Nombre');
-    validateEmpty(lastName.value, lastName, lastNameError, 'Apellido');
-    validateEmpty(tel.value, tel, telError, 'Telefono');
-    validateEmpty(email.value, email, emailError, 'Email');
+    validateEmpty(firstName.value, firstName, firstNameError, 'Nombre no puede estar vacio');
+    validateEmpty(lastName.value, lastName, lastNameError, 'Apellido no puede estar vacio');
+    validateEmpty(tel.value, tel, telError, 'Telefono no puede estar vacio');
+    validateEmail(email.value, email, emailError, 'Email');
+    
 });
 
+function validateEmail(valueInput, divInput, divError, nameInput){
+    let regExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
+    
+    if (regExp.test(valueInput) == true){
+        hideError(divInput, divError)      
+    }else{
+        showError(divInput, divError, 'Por favor introduce un correo valido')
+    }
+}
 
 function validateEmpty(valueInput, divInput, divError, nameInput){
     if(valueInput.length == 0){
@@ -29,10 +39,10 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
     }
 }
 
-function showError(divInput, divError, nameInput){
+function showError(divInput, divError, error){
      divInput.style.border = '1px solid red';
      divError.innerHTML = `<img class="icon-error" src="./Imagenes/icon-error.svg" alt="">
-     <p class="error">${nameInput} no puede estar vacio</p>`;
+     <p class="error">${error}</p>`;
 }
 
 function hideError(divInput, divError){
